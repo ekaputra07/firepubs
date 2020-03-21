@@ -3,8 +3,7 @@ const firepubs = require('firepubs')
 
 admin.initializeApp()
 
-exports.firepubsDemo = firepubs.FirestoreOnWrite(
+exports.firepubsDemo = firepubs.FirestoreOnDelete(
   '/env/eka/firepubs/{docId}',
-  'firepubs',
-  { attr: 'exampleAttr' }
+  'firepubs'
 )
