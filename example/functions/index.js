@@ -5,5 +5,6 @@ admin.initializeApp()
 
 exports.firepubsDemo = firepubs.FirestoreOnWrite(
   '/env/eka/firepubs/{docId}',
-  'firepubs'
+  'firepubs',
+  { attr: 'exampleAttr' }
 )
