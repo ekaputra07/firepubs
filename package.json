@@ -1,0 +1,29 @@
+{
+  "name": "firepubs",
+  "version": "1.0.0",
+  "description": "Cloud function helper to transfer Firestore trigger events to PubSub",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekaputra07/firepubs.git"
+  },
+  "keywords": [
+    "firestore",
+    "pubsub",
+    "functions"
+  ],
+  "author": "https://github.com/ekaputra07",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekaputra07/firepubs/issues"
+  },
+  "homepage": "https://github.com/ekaputra07/firepubs#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^1.6.0",
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0"
+  }
+}
