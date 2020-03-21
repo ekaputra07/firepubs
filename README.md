@@ -1,2 +1,2 @@
-# firepubs
-Firepubs is a simple Cloud Functions that transfer your Firestore trigger events to PubSub message
+# FireSub
+Firesub is a Firebase Functions helper to easily publish Firestore events to PubSub.
