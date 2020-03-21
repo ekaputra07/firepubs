@@ -1,9 +1,9 @@
 const admin = require('firebase-admin')
-const firepubs = require('firepubs')
+const firesub = require('firesub')
 
 admin.initializeApp()
 
-exports.firepubsDemo = firepubs.FirestoreOnDelete(
-  '/env/eka/firepubs/{docId}',
-  'firepubs'
+exports.firesubDemo = firesub.FirestoreOnDelete(
+  '/env/eka/firesub/{docId}',
+  'firesub'
 )
