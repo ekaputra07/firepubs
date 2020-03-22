@@ -12,25 +12,25 @@ admin.initializeApp()
 
 // -- FirestoreOnWrite will publish event when document created, updated and deleted
 exports.firestoreOnWrite = firesub.FirestoreOnWrite(
-  '/my/document/{docId}',
-  'topic-on-write'
+  '/docs/{docId}',
+  'firesub_topic'
 )
 
 // -- or use FirestoreOnWrite, FirestoreOnUpdate or FirestoreOnDelete separately
 exports.firestoreOnCreate = firesub.FirestoreOnCreate(
-  '/my/document/{docId}',
-  'topic-on-create'
+  '/docs/{docId}',
+  'firesub_topic'
 )
 
 exports.firestoreOnUpdate = firesub.FirestoreOnUpdate(
-  '/my/document/{docId}',
-  'topic-common',
+  '/docs/{docId}',
+  'firesub_topic',
   { event: 'update' } // custom pubsub message attribute.
 )
 
 exports.firestoreOnDelete = firesub.FirestoreOnDelete(
-  '/my/document/{docId}',
-  'topic-common',
+  '/docs/{docId}',
+  'firesub_topic',
   { event: 'delete' }
 )
 
@@ -38,25 +38,25 @@ exports.firestoreOnDelete = firesub.FirestoreOnDelete(
  * Below are example on how to publish Storage events to PubSub
  */
 exports.storageOnFinalize = firesub.StorageOnFinalize(
-  'bucket-name',
-  'topic-name',
+  'firesub-bucket',
+  'firesub_topic',
   { attr: 'attr' }
 )
 
 exports.storageOnArchive = firesub.StorageOnArchive(
-  'bucket-name',
-  'topic-name',
+  'firesub-bucket',
+  'firesub_topic',
   { attr: 'attr' }
 )
 
 exports.storageOnDelete = firesub.StorageOnDelete(
-  'bucket-name', 
-  'topic-name', 
+  'firesub-bucket',
+  'firesub_topic',
   { attr: 'attr' }
 )
 
 exports.storageOnMetadataUpdate = firesub.StorageOnMetadataUpdate(
-  'bucket-name',
-  'topic-name',
+  'firesub-bucket',
+  'firesub_topic',
   { attr: 'attr' }
 )
