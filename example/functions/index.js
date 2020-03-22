@@ -33,3 +33,30 @@ exports.firestoreOnDelete = firesub.FirestoreOnDelete(
   'topic-common',
   { event: 'delete' }
 )
+
+/**
+ * Below are example on how to publish Storage events to PubSub
+ */
+exports.storageOnFinalize = firesub.StorageOnFinalize(
+  'bucket-name',
+  'topic-name',
+  { attr: 'attr' }
+)
+
+exports.storageOnArchive = firesub.StorageOnArchive(
+  'bucket-name',
+  'topic-name',
+  { attr: 'attr' }
+)
+
+exports.storageOnDelete = firesub.StorageOnDelete(
+  'bucket-name', 
+  'topic-name', 
+  { attr: 'attr' }
+)
+
+exports.storageOnMetadataUpdate = firesub.StorageOnMetadataUpdate(
+  'bucket-name',
+  'topic-name',
+  { attr: 'attr' }
+)

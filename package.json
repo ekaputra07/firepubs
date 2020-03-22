@@ -1,10 +1,10 @@
 {
   "name": "firesub",
   "version": "1.0.0",
-  "description": "Cloud function helper to publish Firestore events to PubSub topic",
+  "description": "Cloud function helper to publish Firestore and Storage events to PubSub topic",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "FIREBASE_CONFIG=test GCLOUD_PROJECT=test jest"
   },
   "repository": {
     "type": "git",
