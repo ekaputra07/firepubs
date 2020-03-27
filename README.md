@@ -57,6 +57,40 @@ Currently it's only available for Firestore and Cloud Storage events, but I migh
 
 More info about Firestore trigger events [here](https://firebase.google.com/docs/functions/firestore-events) and more about Cloud Storage trigger events [here](https://firebase.google.com/docs/functions/gcp-storage-events)
 
+## PubSub Message Format
+
+Below are message formats that are published to topic for each event type.
+
+#### `FirestoreOnWrite`, `FirestoreOnUpdate`
+
+```
+{
+   "id": "document ID",
+   "timestamp": "2020-03-21T04:24:15.789595Z",
+   "before": {... document before ...},
+   "after": {... document after ...}
+}
+```
+
+#### `FirestoreOnCreate`, `FirestoreOnDelete`
+
+```
+{
+   "id": "document ID",
+   "timestamp": "2020-03-21T04:24:15.789595Z",
+   "data": {... document that created or deleted ...}
+}
+```
+
+#### `StorageOnFinalize`, `StorageOnArchive`, `StorageOnDelete`, `StorageOnMetadataUpdate`
+
+```
+{
+   "file": {... file information ...},
+   "context": {... event context ...}
+}
+```
+
 ## Example usage
 
 You could see example project [here](https://github.com/ekaputra07/firesub/tree/master/example/functions)
