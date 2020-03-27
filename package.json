@@ -1,6 +1,6 @@
 {
   "name": "firesub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cloud function helper to publish Firestore and Storage events to PubSub topic",
   "main": "lib/index.js",
   "scripts": {
