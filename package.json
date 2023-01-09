@@ -23,7 +23,7 @@
   "homepage": "https://github.com/ekaputra07/firesub#readme",
   "dependencies": {
     "@google-cloud/pubsub": "^1.6.0",
-    "firebase-admin": "^8.6.0",
+    "firebase-admin": "^11.4.1",
     "firebase-functions": "^3.3.0"
   },
   "devDependencies": {
